@@ -6,25 +6,17 @@ class Solution {
             if(i%2==0){
                 if(s.charAt(i)!='0')
                     c++;
+                else
+                    ct++;  
             }
             else{
                 if(s.charAt(i)!='1'){
                     c++;
                 }
-            }
-        }
-        for(int i=0;i<n;i++){
-            if(i%2==1){
-                if(s.charAt(i)!='0')
+                else
                     ct++;
             }
-            else{
-                if(s.charAt(i)!='1'){
-                    ct++;
-                }
-            }
         }
-        System.out.print(ct+" "+c);
         return ct<c?ct:c;
     }
 }
